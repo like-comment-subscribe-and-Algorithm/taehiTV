@@ -1,4 +1,4 @@
-package 구현
+package baekjoon.구현
 
 // boj 20546
 
