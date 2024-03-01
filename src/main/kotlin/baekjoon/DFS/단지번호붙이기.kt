@@ -1,4 +1,4 @@
-package baekjoon.DP
+package baekjoon.DFS
 
 // boj 2667
 
