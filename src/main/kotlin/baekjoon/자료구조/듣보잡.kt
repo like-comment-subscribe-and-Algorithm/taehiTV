@@ -19,7 +19,10 @@ fun main() {
         if (set.contains(input)) result.add(input)
     }
 
-    bw.write(result.size)
+    bw.write(result.size.toString())
+    bw.newLine()
+    result.sort()
+
     for (i in result) {
         bw.write(i)
         bw.newLine()
