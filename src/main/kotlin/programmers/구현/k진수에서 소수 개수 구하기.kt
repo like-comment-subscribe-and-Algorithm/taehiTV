@@ -1,5 +1,7 @@
 package programmers.구현
 
+import java.math.BigInteger
+
 class k진수에서_소수_개수_구하기 {
     fun solution(n: Int, k: Int): Int {
         var answer: Int = 0
@@ -8,21 +10,11 @@ class k진수에서_소수_개수_구하기 {
         val arr = kNum.split("0")
 
         for (i in arr.indices) {
-            if (arr[i] != "") {
-                if (isPrime(arr[i].toLong())) answer += 1
+            if (arr[i] != "" && arr[i] != "1") {
+                if (BigInteger(arr[i]).isProbablePrime(1)) answer += 1
             }
         }
 
         return answer
-    }
-
-    fun isPrime(num : Long) : Boolean {
-        if (num < 2) return false
-
-        for (i in 2..Math.sqrt(num.toDouble()).toLong()) {
-            if (num % i == 0L) return false
-        }
-
-        return true
     }
 }
