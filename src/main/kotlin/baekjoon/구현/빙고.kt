@@ -56,7 +56,7 @@ fun main() {
             count += 1
             checkNumber(input[index])
 
-            if (bingoCount == 3) {
+            if (bingoCount >= 3) {
                 bw.write(count.toString())
                 bw.flush()
                 bw.close()
